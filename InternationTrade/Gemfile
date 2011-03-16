@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+
+gem 'happymapper'
+
+group :test do
+  gem 'mocha'
+  gem 'ruby-debug19'
+end
