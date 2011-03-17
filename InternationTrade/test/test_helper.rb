@@ -1,4 +1,4 @@
-require_relative '../international_trade' 
+require_relative '../lib/international_trade' 
 require 'test/unit'
 require 'mocha'
 require 'ruby-debug'
