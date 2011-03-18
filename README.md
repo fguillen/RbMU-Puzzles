@@ -1,6 +1,6 @@
 # RbMU Adminission Puzzles
 
-These project are my solutions to the *Programming Quiz* proposed for the [Ruby Mendicant University](http://university.rubymendicant.com/) to apply for adminssion.
+These project are my solutions to the *Programming Quiz* proposed for the [Ruby Mendicant University](http://university.rubymendicant.com/) to apply for admission.
 
 Each folder is one of the Puzzles.
 

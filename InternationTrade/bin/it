@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/international_trade'
-puts InternationalTrade.total_sales( ARGV[0], ARGV[1] )
