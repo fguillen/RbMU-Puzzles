@@ -2,7 +2,7 @@ module Utils
   def self.active_lasers( robot_position, north_lasers, south_lasers )
     active_lasers_sequence = ""
     
-    selector = even?( robot_position ) ? [north_lasers, south_lasers] : [south_lasers, north_lasers]
+    selector = robot_position.even? ? [north_lasers, south_lasers] : [south_lasers, north_lasers]
     
     (0..(north_lasers.length - 1)).each do |index|
       active_lasers_sequence += selector[index % 2][index]
@@ -34,10 +34,6 @@ module Utils
   
   def self.split_conveyor_layouts( conveyor_layouts_grid )
     conveyor_layouts_grid.split( "\n\n" )
-  end
-  
-  def self.even?( number )
-    number % 2 == 0
   end
   
   def self.best_direction( west_damages, east_damages )
