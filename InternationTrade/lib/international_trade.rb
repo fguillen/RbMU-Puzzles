@@ -6,9 +6,7 @@ require_relative 'tran'
 module InternationalTrade
   DB_PATH = File.expand_path( "#{File.dirname(__FILE__)}/../db" )
   
-  extend self
-  
-  def total_sales( sku, currency )
+  def self.total_sales( sku, currency )
     init_rates_index
     trans = db_trans.select { |e| e.sku == sku }
     total_amount = trans.inject(0) do |sum,e| 
@@ -18,15 +16,15 @@ module InternationalTrade
     return total_amount
   end
 
-  def init_rates_index
+  def self.init_rates_index
     Rate.create_index( "#{db_path}/RATES.xml" )
   end
   
-  def db_trans
+  def self.db_trans
     @db_trans ||= Tran.parse( "#{db_path}/TRANS.csv" )
   end
   
-  def db_path
+  def self.db_path
     DB_PATH
   end
 end
