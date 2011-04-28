@@ -1,4 +1,4 @@
-class Utils  
+module Utils  
   def self.active_lasers( robot_position, north_lasers, south_lasers )
     active_lasers_sequence = ""
     

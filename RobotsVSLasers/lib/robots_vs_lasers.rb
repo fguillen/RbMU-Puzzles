@@ -1,6 +1,6 @@
 require_relative 'utils'
 
-class RobotsVSLasers
+module RobotsVSLasers
   DB_PATH = "#{File.dirname(__FILE__)}/../db/"
   
   def self.run
