@@ -3,7 +3,7 @@ require 'bigdecimal'
 require_relative 'rate'
 require_relative 'tran'
 
-class InternationalTrade
+module InternationalTrade
   DB_PATH = File.expand_path( "#{File.dirname(__FILE__)}/../db" )
   
   def self.total_sales( sku, currency )
